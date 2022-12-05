@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS_HandsOn3</title>
+</head>
+<body>
+    <h1>Iteration Statements</h1>
+    <hr>
+    <h3>Q1. Find the number of digits <br>
+        Take a number from the user and print the count of digits in that number.</h3>
+    <pre>
+        
+const Find_Digits = (N) => 
+{
+	 let count=0, i=0,div=10;
+
+	 for(i=0;N>0;i++){
+	   N= Math.floor(N/div);
+	   count++;
+	 }
+	 return count;
+};
+    </pre>
+
+    <h3>Q2.Find the Fives. <br>
+        Among all the digits from 0−9, PrepBuddy likes number 5. He has a number and wants you to find out the number of times 5 occurred in the given number.</h3>
+    <pre>
+        
+
+const Find_Five = (N) => 
+{
+        let count=0, i=0,div=10;
+        for(i=0;N>0;i++){
+        if(N%10==5){
+            count++;
+        }
+        N= Math.floor(N/div);
+        
+        }
+        return count;
+};        
+    </pre>
+
+    <h3>Q3.Find Sum <br>
+        You are given an integer N, and your task is to find the sum of all the even integers starting from 1 upto N(N inclusive).</h3>
+    <pre>
+
+const findSum = (n) => {
+let sum=0;
+for(let i=2;i<=n;i+=2){
+    sum=sum+i;
+}
+return sum;
+};
+         
+    </pre>
+
+    <h3>Q5.Find the sum of the digits of a given number. <br>
+        Write a program that takes a number from the user and get the sum of the digits present in the number.</h3>
+    <pre>
+       
+const Number_Sum = (N) => 
+{
+	let sum=0, i=0,div=10;
+	 for(i=0;N>0;i++){
+	   sum=sum+(N%div);
+	   N= Math.floor(N/div);
+	 
+	 }
+	 return sum;
+};  
+    </pre>
+
+    <h3>Q6.Print the Odds. <br>
+        Write a program which takes  a number from user and print all odd numbers in between 2 and N, but print 2 first.</h3>
+    <pre>
+
+const Print_Odd = (N) => 
+{
+        console.log(2);
+        for(i=3;i<=N;i+=2){
+    console.log(i);
+        }
+
+};                
+    </pre>
+
+    <h3>Q7.Print the Pattern. <br>
+        Write a program which ask user for no of lines and print a pattern using an asterik </h3>
+    <pre>
+
+const Print_pattern = (N) => 
+{
+    let i=1;
+    for(;i<=N;i++){
+    for(let j=0;j<i;j++){
+        process.stdout.write('*');
+    }
+    console.log();
+    }
+};
+
+                       
+    </pre>
+
+    <h3>Q8.Check whether a Number is a prime or not. <br>
+        Write a program which takes  a number from user and check whether number is prime number or not a prime number.</h3>
+    <pre>
+
+const Prime_Check = (N) => 
+{
+    let flag=0;
+    if(N==1){
+    return 'NO';
+    }
+        for(let i=2;i<N;i++){
+        if(N%i==0){
+            flag=1;
+        }
+        }
+        if(flag==0){
+        return 'YES';
+        }
+        else{
+        return 'NO';
+        }
+};                     
+    </pre>
+
+    <h3>Q9.Print Numbers <br>
+        You are given an integer N, and your task is to print all the integers starting from 1 till N (N inclusive).</h3>
+    <pre>
+        
+const printNumbers = (n) => {
+    for(let i=1;i<=n;i++){
+        process.stdout.write(i+' ');
+    }
+};
+                 
+    </pre>
+
+    <h3>Q10.Print the Table <br>
+        Write a program which takes a number from user and print the table.</h3>
+    <pre>
+const Print_Table = (N) => 
+{
+    if(N==0){
+    console.log(0);
+    }
+    else{
+        for(let i=1;i<=10;i++){
+        console.log(N+' * '+i+' = '+N*i);
+        }
+    }
+};           
+    </pre>
+
+
+</body>
+</html>
